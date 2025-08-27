@@ -1,0 +1,28 @@
+<%- include("Partials/header.ejs") %>
+<main class="container">
+    <h2>Create a Post</h2>
+
+    <!-- Post form -->
+    <form action="/posts" method="POST" enctype="multipart/form-data">
+      <input 
+        type="text" 
+        name="author" 
+        placeholder="Your name" 
+        required 
+        class="input-box"
+      />
+
+      <textarea 
+        name="body" 
+        rows="3" 
+        placeholder="What's on your mind?" 
+        required 
+        class="input-box"
+      ></textarea>
+      <input type="file" name="image" accept="image/*" required />
+
+      <button type="submit" class="post-btn">Post</button>
+    </form>
+
+
+</body>

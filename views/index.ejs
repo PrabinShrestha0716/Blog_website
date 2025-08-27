@@ -1,0 +1,30 @@
+<%- include("Partials/header.ejs") %>
+<h2>All Posts</h2>
+    <% if (posts.length === 0) { %>
+      <p>No posts yet. Be the first!</p>
+    <% } else { %>
+      <ul>
+        <% posts.forEach(post => { %>
+          <li>
+            <strong><%= post.author %></strong>
+            <p><%= post.body %></p>
+
+          <img src="<%= post.image %>" alt="post image" style="max-width:350px;" />
+            <br>        
+            <div class="post-actions" role="group" aria-label="Post actions">
+            <button class="action-btn" type="button">👍 Like</button>
+            <button class="action-btn" type="button">💬 Comment</button>
+            <button class="action-btn" type="button">↗️ Share</button>
+            </div>
+            <small>
+              Posted on <%= new Date(post.createdAt).toLocaleString() %>
+         
+            </small>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+    <br>
+
+    
+<%- include("Partials/footer.ejs") %>

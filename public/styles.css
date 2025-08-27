@@ -1,0 +1,94 @@
+
+.navbar {
+  background: #222;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 110px;
+}
+
+.nav-container {
+  max-width: 960px;
+   margin-left: 30 rem;
+   margin-top: 2rem;
+  display: flex;           
+  flex-direction: row;     
+  gap: 10px;          
+
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 45%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link {
+  background: #4CAF50;
+  color: #ffffff;
+  transition: color 0.2s;
+  border-radius: 15px;
+  display: block;  
+ text-decoration: none; 
+ width: 8rem;
+
+}
+
+.nav-link:hover{
+   color: #444ce8;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  color: #444ce8;
+  text-decoration: none;
+}
+
+.nav-btn {
+  background: #4CAF50;
+  color: #ffffff;
+  border-radius: 15px;
+  transition: color 0.3s;
+  display: block;
+  text-decoration: none;   
+  width: 8rem;
+  padding:7px;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Equal-width action buttons below each post */
+.post-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three equal columns */
+  gap: 8px;
+  margin: 8px 0 4px;
+  max-width: 350px; /* match  image's max width;*/
+  height: 20px;
+  font-size: 0.6rem;
+}
+
+.action-btn {
+  display: inline-block;
+  width: 100%;      
+  border: 0.5px solid #2a3966;
+  border-radius: 8px;
+  background: #77a0e2;
+  color: #e8ecf1;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.06s ease, filter 0.15s ease, background 0.15s ease;
+}
+
+.action-btn:hover {
+  filter: brightness(1.05);
+}
+
+.action-btn:active {
+  transform: translateY(1px);
+}
