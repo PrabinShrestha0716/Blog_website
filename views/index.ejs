@@ -1,15 +1,22 @@
 <%- include("Partials/header.ejs") %>
-<h2>All Posts</h2>
+
+<h2 class="heading">
+</h2>
     <% if (posts.length === 0) { %>
-      <p>No posts yet. Be the first!</p>
+      <p class="starter">No posts yet. Be the first!</p>
     <% } else { %>
       <ul>
         <% posts.forEach(post => { %>
-          <li>
+          
+           <div class="author-line">
+          <img src="/image.png" class="author-photo" style="max-width: 30px;">
             <strong><%= post.author %></strong>
-            <p><%= post.body %></p>
+          </div>
 
-          <img src="<%= post.image %>" alt="post image" style="max-width:350px;" />
+            <p><%= post.body %></p>
+          <% if (post.image) { %>
+          <img src="<%= post.image %>" class="photo" alt="post image" style="max-width:350px;" />
+          <% } %>
             <br>        
             <div class="post-actions" role="group" aria-label="Post actions">
             <button class="action-btn" type="button">👍 Like</button>
@@ -18,13 +25,15 @@
             </div>
             <small>
               Posted on <%= new Date(post.createdAt).toLocaleString() %>
-         
             </small>
-          </li>
+             <hr class="post-divider">
         <% }) %>
       </ul>
     <% } %>
-    <br>
+
+
+
+
+<%- include("Partials/footer.ejs") %>
 
     
-<%- include("Partials/footer.ejs") %>
